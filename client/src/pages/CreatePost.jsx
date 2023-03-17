@@ -20,7 +20,7 @@ const CreatePost = () => {
         if (form.prompt) {
             try {
                 setgeneratingImg(true);
-                const response = await fetch('http://localhost:8080/api/v1/dalle', {  // we are passing all of the needed data to our backend to then get back the response which is going to be the ai generated image
+                const response = await fetch('https://joy-ai-imaginator.onrender.com/api/v1/dalle', {  // we are passing all of the needed data to our backend to then get back the response which is going to be the ai generated image
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const CreatePost = () => {
             setloading(true);
 
             try {
-                const response = await fetch('http://localhost:8080/api/v1/post', {
+                const response = await fetch('https://joy-ai-imaginator.onrender.com/api/v1/post', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
